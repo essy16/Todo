@@ -67,7 +67,8 @@ fun TodoListScreen(
                     TodoListItem(
                         toDo = todo,
                         event = viewModel::onEvent,
-                        modifier = Modifier.clickable {
+                        modifier = Modifier.fillMaxWidth()
+                                           .clickable {
                             viewModel.onEvent(TodolistEvent.OnClickTodo(todo))
                         }
                     )
