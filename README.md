@@ -48,10 +48,10 @@ To run the app, follow these steps:
 3. Build and run the project on an emulator or physical device.
 
 ## Screenshots
-![Screenshot 1](![WhatsApp Image 2023-10-16 at 11.27.55.jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.27.55.jpeg))
-![Screenshot 2](![WhatsApp Image 2023-10-16 at 11.30.36.jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.30.36.jpeg))
-![Screenshot 3](![WhatsApp Image 2023-10-16 at 11.30.37 (1).jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.30.37%20%281%29.jpeg))
-![Video]([WhatsApp Video 2023-10-16 at 11.30.03.mp4](videos%20and%20pics%2FWhatsApp%20Video%202023-10-16%20at%2011.30.03.mp4))
+(![WhatsApp Image 2023-10-16 at 11.27.55.jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.27.55.jpeg))
+(![WhatsApp Image 2023-10-16 at 11.30.36.jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.30.36.jpeg))
+(![WhatsApp Image 2023-10-16 at 11.30.37.jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.30.37.jpeg))
+(![WhatsApp Image 2023-10-16 at 11.30.37 (1).jpeg](videos%20and%20pics%2FWhatsApp%20Image%202023-10-16%20at%2011.30.37%20%281%29.jpeg))
 
 
 
