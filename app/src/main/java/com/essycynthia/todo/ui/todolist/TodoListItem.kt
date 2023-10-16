@@ -15,11 +15,11 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.essycynthia.todo.data.ToDo
+import com.essycynthia.todo.data.Todo
 
 @Composable
 fun TodoListItem(
-    toDo: ToDo,
+    toDo: Todo,
     event: (TodolistEvent) -> Unit,
     modifier: Modifier = Modifier
 ) {

@@ -37,16 +37,17 @@ class MainActivity : ComponentActivity() {
                             TodoListScreen(onNavigate = { navController.navigate(it.route) })
                         }
                         composable(
-                            route = Routes.ADD_EDIT_TODO + "?todoId = {todoId}",
+                            route = "${Routes.ADD_EDIT_TODO}?todoId={todoId}",
                             arguments = listOf(
                                 navArgument(name = "todoId"){
                                     type = NavType.IntType
                                     defaultValue = -1
                                 }
                             )
-                        ){
-                           AddEditScreen(onPopBackStack = { navController.popBackStack()})
+                        ) {
+                            AddEditScreen(onPopBackStack = { navController.popBackStack() })
                         }
+
                     }
                 }
             }

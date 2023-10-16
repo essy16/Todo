@@ -2,8 +2,8 @@ package com.essycynthia.todo.ui.todolist
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.essycynthia.todo.data.ToDo
-import com.essycynthia.todo.data.ToDoRepository
+import com.essycynthia.todo.data.Todo
+import com.essycynthia.todo.data.TodoRepository
 import com.essycynthia.todo.util.Routes
 import com.essycynthia.todo.util.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class TodolistViewModel @Inject constructor(private val repository: ToDoRepository) : ViewModel() {
+class TodolistViewModel @Inject constructor(private val repository: TodoRepository) : ViewModel() {
     val todos = repository.getAllTodos()
 
     //It is mutable hence we put it with an underscore
@@ -22,7 +22,7 @@ class TodolistViewModel @Inject constructor(private val repository: ToDoReposito
     //This is the immutable version
     val uiEvent = _uiEvent.receiveAsFlow()
 
-    var deletedTodo: ToDo? = null
+    private var deletedTodo: Todo? = null
 
     fun onEvent(event: TodolistEvent) {
         when (event) {
@@ -59,6 +59,7 @@ class TodolistViewModel @Inject constructor(private val repository: ToDoReposito
             }
             is TodolistEvent.OnClickTodo -> {
                 sendEvent(UiEvent.Navigate(Routes.ADD_EDIT_TODO + "?todoId=${event.todo.id}"))
+
 
             }
 
