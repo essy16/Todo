@@ -7,22 +7,20 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.launch
 import androidx.lifecycle.viewModelScope
-import com.essycynthia.todo.data.ToDo
-import com.essycynthia.todo.data.ToDoRepository
-import com.essycynthia.todo.ui.add_edit_todo.AddEditEvent.OnSaveClick
+import com.essycynthia.todo.data.Todo
+import com.essycynthia.todo.data.TodoRepository
 import com.essycynthia.todo.util.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class AddEditViewModel @Inject constructor(
-    private val repository: ToDoRepository,
+    private val repository: TodoRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
-    var todo by mutableStateOf<ToDo?>(null)
+    var todo by mutableStateOf<Todo?>(null)
         private set
     var title by mutableStateOf("")
         private set
@@ -63,7 +61,7 @@ class AddEditViewModel @Inject constructor(
                         return@launch
                     }
                     repository.insertTodo(
-                        ToDo(
+                        Todo(
                             id = todo?.id,
                             description = description,
                             title = title,

@@ -2,9 +2,9 @@ package com.essycynthia.todo.di
 
 import android.app.Application
 import androidx.room.Room
-import com.essycynthia.todo.data.ToDoDatabase
-import com.essycynthia.todo.data.ToDoRepository
-import com.essycynthia.todo.data.ToDoRepositoryImpl
+import com.essycynthia.todo.data.TodoDatabase
+import com.essycynthia.todo.data.TodoRepository
+import com.essycynthia.todo.data.TodoRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,17 +16,18 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     @Singleton
-    fun provideRoomDatabase(app: Application): ToDoDatabase {
+    fun provideRoomDatabase(app: Application): TodoDatabase {
         return Room.databaseBuilder(
             app,
-            ToDoDatabase::class.java,
+            TodoDatabase::class.java,
             "todo_db"
         ).build()
 
     }
     @Provides
     @Singleton
-    fun provideTodoRepository(db: ToDoDatabase): ToDoRepository {
-        return ToDoRepositoryImpl(db.toDoDao)
+    fun provideTodoRepository(db: TodoDatabase): TodoRepository {
+        return TodoRepositoryImpl(db.todoDao)
     }
 }
+
