@@ -56,6 +56,7 @@ To run the app, follow these steps:
 
 
 
+
 ## Contributing
 
 Contributions are always welcome! If you have any ideas or suggestions to improve the app, please feel free to open an issue or submit a pull request with a detailed description of what you've done or added.
@@ -71,6 +72,6 @@ Contributions are always welcome! If you have any ideas or suggestions to improv
 
 If you have any questions or suggestions, please feel free to reach out to the project maintainers:
 
-Your Name - [Esther Cynthia](mailto:essyc14@gmail.com)
+[Esther Cynthia](mailto:essyc14@gmail.com)
 
 Project Link: [https://github.com/essy16/Todo](https://github.com/essy16/Todo)
