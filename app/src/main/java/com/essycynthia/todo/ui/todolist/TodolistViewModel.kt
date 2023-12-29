@@ -23,6 +23,7 @@ class TodolistViewModel @Inject constructor(private val repository: TodoReposito
     val uiEvent = _uiEvent.receiveAsFlow()
 
     private var deletedTodo: Todo? = null
+      var sheetState : Boolean = false
 
     fun onEvent(event: TodolistEvent) {
         when (event) {
@@ -55,11 +56,12 @@ class TodolistViewModel @Inject constructor(private val repository: TodoReposito
 
             }
             is TodolistEvent.OnAddTodo -> {
-                sendEvent(UiEvent.Navigate(Routes.ADD_EDIT_TODO))
+//                sendEvent(UiEvent.Navigate(Routes.ADD_EDIT_TODO))
+                sheetState = true
             }
             is TodolistEvent.OnClickTodo -> {
-                sendEvent(UiEvent.Navigate(Routes.ADD_EDIT_TODO + "?todoId=${event.todo.id}"))
-
+//                sendEvent(UiEvent.Navigate(Routes.ADD_EDIT_TODO + "?todoId=${event.todo.id}"))
+                sheetState = true
 
             }
 

@@ -26,11 +26,9 @@ class AddEditViewModel @Inject constructor(
         private set
     var description by mutableStateOf("")
         private set
-
-    //It is mutable hence we put it with an underscore
+    var priority by mutableStateOf(0)
     private val _uiEvent = Channel<UiEvent>()
 
-    //This is the immutable version
     val uiEvent = _uiEvent.receiveAsFlow()
 
     init {
@@ -40,6 +38,7 @@ class AddEditViewModel @Inject constructor(
                 repository.getTodoById(todoId)?.let { todo ->
                     title = todo.title
                     description = todo.description ?: ""
+                    priority = todo.priority ?: 0
                     this@AddEditViewModel.todo = todo
 
                 }
@@ -65,6 +64,7 @@ class AddEditViewModel @Inject constructor(
                             id = todo?.id,
                             description = description,
                             title = title,
+                            priority = priority,
                             isDone = todo?.isDone ?: false
                         )
                     )
@@ -78,6 +78,9 @@ class AddEditViewModel @Inject constructor(
             is AddEditEvent.OnTitleChanged -> {
                 title = event.title
 
+            }
+            is AddEditEvent.OnPriorityUpdated -> {
+                priority = event.priority
             }
         }
     }
